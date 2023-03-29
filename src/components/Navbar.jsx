@@ -30,12 +30,12 @@ const dispatch = useDispatch()
           >
             News
           </Typography>
-          {user.email && (
+          {user?.email && (
             <Button color="inherit" onClick={handleLogout}>
               Logout
             </Button>
           )}
-          {!user.email && (
+          {!user?.email && (
             <Button
               color="inherit"
               onClick={() => {
