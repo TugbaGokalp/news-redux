@@ -13,7 +13,8 @@ const authSlice = createSlice({
 
         },
 
-        clearUser: () => {
+        clearUser: (state) => {
+            state.user = ""
             
         }
 
