@@ -11,10 +11,10 @@ import { clearUser } from "../features/authSlice"
 export default function Navbar() {
   const navigate = useNavigate();
 const dispatch = useDispatch()
-  const user = useSelector((state) => state.auth.user);
+  const {user} = useSelector((state) => state.auth);
 
   const handleLogout = () => {
-    dispatchEvent(clearUser())
+    dispatch(clearUser())
     navigate("/login");
   };
 
@@ -30,7 +30,7 @@ const dispatch = useDispatch()
           >
             News
           </Typography>
-          {user?.email && (
+          {user?.email && user.password &&(
             <Button color="inherit" onClick={handleLogout}>
               Logout
             </Button>

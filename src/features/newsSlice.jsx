@@ -12,7 +12,7 @@ export const getNews = createAsyncThunk(
 
   async (thunkAPI, {rejectWithValue}) => {
     const API_KEY = "b924a4931c4146859a1d4ac136f7d9aa";
-    const url = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${API_KEY}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${API_KEY}`
     try {
       const { data } = await axios(url);
       console.log(data);
