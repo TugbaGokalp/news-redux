@@ -20,15 +20,17 @@ const News = () => {
     return () => {
       // cleanup function (componentDidUnmount)
       dispatch(clearNews());
-    };
-  });
+    }
+  }, []);
   return (
     <>
       <h1>NEWS</h1>
 
-       {loading && (<Box display="flex" alignItems="center" justifyContent="center">
-        <img src={loadingGif} />
-        </Box>)}
+      {loading && (
+        <Box display="flex" alignItems="center" justifyContent="center">
+          <img src={loadingGif} alt="img" />
+        </Box>
+      )}
       {error && (
         <Typography variant="h2" color="error">
           {error}
