@@ -84,7 +84,7 @@ export default function Login() {
       <Typography variant="body2" color="text.secondary" align="center">
         {"Copyright © "}
         <Link color="inherit" href="https://www.clarusway.com/">
-          Clarusway
+          Tugba Gokalp
         </Link>{" "}
         {new Date().getFullYear()}
         {"."}
